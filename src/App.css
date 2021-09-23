@@ -1,0 +1,35 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.searchBlock {
+  margin: 10px 0 0 0;
+
+}
+
+.searchBlock span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.counPages {
+  margin: 15px 0;
+}
+
+.counPages .selectedPage {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.counPages span {
+  margin: 0 2.5px 0;
+}

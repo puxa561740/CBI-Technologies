@@ -1,7 +1,6 @@
 
 const FilmCard = ({data}) => {
 
-  // console.log(data)
   return (<>
     <div>
       <div><img src={data.Poster} alt='film poster'/></div>

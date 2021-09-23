@@ -7,12 +7,14 @@ import SearchFilmResult from './components/SearchFilmResult/SearchFilmResult'
 function App() {
 
   const viewSerchInf = useSelector(state=>state.searchFilmReduser.searchFilm)
-  console.log(viewSerchInf.length)
+  const films = useSelector(state=>state.filmReduser)
+
+  console.log(films)
 
   return (
     <>
       <Header/>
-      {viewSerchInf.length === 0 ? null : <SearchResults/>}
+      {/* {viewSerchInf.length === 0 ? null : <SearchResults/>} */}
       <SearchFilmResult/>
     </>
   );
