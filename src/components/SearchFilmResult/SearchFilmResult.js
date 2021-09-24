@@ -13,18 +13,18 @@ const SerchFilmResult = ({requestFilm}) => {
     requestFilm()
   },[])
 
-  
 
   return (<>
-    <div className='counPages'>
-      <TotalPages/>
-    </div>
-    <div>
+    
+    <div className='searchResultBlock'>
       {stateFilmSearchRes ? 
       stateFilmSearchRes.map((a, i)=>{
-        return <FilmCard key={i} data={a}/>
+        return <FilmCard key={i} data={a} />
       }) : null
     }
+    </div>
+    <div className='counPages'>
+      <TotalPages/>
     </div>
   </>)
 }

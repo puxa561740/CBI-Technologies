@@ -48,7 +48,7 @@ const TotalPages = ({startSearch,
 
 
     arr = arr.slice(startPage, lastPage)
-    return arr.map(a=><span key={a} className={curentPage === a && 'selectedPage'} onClick={selectedPage}>{a}</span>)
+    return arr.map(a=><span key={a} className={curentPage === a ? 'selectedPage' : undefined} onClick={selectedPage}>{a}</span>)
   }
 
 
@@ -63,9 +63,13 @@ const TotalPages = ({startSearch,
   }
 
   return (<>
-    {!allPage ? null : <button onClick={minus} disabled={curentPage === 1 || isSearch ? true : false}><span></span></button>}
+    {!allPage ? null : <button className='minusPages' onClick={minus} disabled={curentPage === 1 || isSearch ? true : false}>
+      <i className="arrow left"/>
+      </button>}
     {pagesNum()}
-    {!allPage ? null : <button onClick={plus} disabled={curentPage === allPage || isSearch ? true : false}><span></span></button>}
+    {!allPage ? null : <button className='plusPages' onClick={plus} disabled={curentPage === allPage || isSearch ? true : false}>
+      <i className="arrow right"/>
+      </button>}
   </>)
 }
 
